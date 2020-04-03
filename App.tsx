@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Button, ThemeProvider } from 'react-native-elements';
+import { ThemeProvider } from 'react-native-elements';
+import { Home } from './src/screens/Home';
 
 
 const theme = {
@@ -12,18 +12,7 @@ const theme = {
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-      <View style={styles.container}>
-        <Button title="Click me!"/>
-      </View>
+      <Home/>
     </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
