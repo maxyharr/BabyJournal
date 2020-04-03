@@ -1,11 +1,21 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Button, ThemeProvider } from 'react-native-elements';
+
+
+const theme = {
+  Button: {
+    raised: true
+  }
+}
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    <ThemeProvider theme={theme}>
+      <View style={styles.container}>
+        <Button title="Click me!"/>
+      </View>
+    </ThemeProvider>
   );
 }
 
